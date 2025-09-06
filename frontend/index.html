@@ -8,20 +8,38 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            text-align: center;
             margin: 0;
             padding: 0;
             background-color: #121212;
             color: #ffffff;
         }
 
+        .header {
+            background: linear-gradient(90deg, #007BFF, #0056b3);
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
         .container {
             margin: 50px auto;
             padding: 20px;
-            max-width: 500px;
+            max-width: 600px;
             background: #1e1e1e;
             border-radius: 10px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+            text-align: center;
+        }
+
+        .description {
+            margin-bottom: 20px;
+            font-size: 1.2em;
+            color: #cccccc;
         }
 
         input[type="file"] {
@@ -88,18 +106,61 @@
                 transform: rotate(360deg);
             }
         }
+
+        .footer {
+            margin-top: 20px;
+            font-size: 14px;
+            text-align: center;
+            padding: 10px;
+            background: #1e1e1e;
+        }
+
+        .footer a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        .social-icons {
+            margin-top: 10px;
+        }
+
+        .social-icons a {
+            margin: 0 10px;
+            color: #007BFF;
+            font-size: 1.5em;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            color: #0056b3;
+        }
     </style>
 </head>
 
 <body>
-    <div class="container">
+    <div class="header">
         <h1>Watercolor Image Generator</h1>
+    </div>
+    <div class="container">
+        <p class="description">Transform your photos into stunning watercolor paintings with just a click!</p>
         <label for="imageInput" class="custom-file-upload">Choose Image</label>
         <input type="file" id="imageInput" accept="image/*" onchange="previewImage()">
         <div class="preview" id="preview"></div>
         <button onclick="generateImage()">Generate Watercolor</button>
         <div id="loader" class="loader" style="display: none;"></div>
         <div id="output"></div>
+    </div>
+    <div class="footer">
+        <p>Created by <a href="https://arjunai.engineer/" target="_blank">Arjun</a>. Check out my <a href="https://github.com/Arjunheregeek" target="_blank">GitHub</a>.</p>
+        <div class="social-icons">
+            <a href="https://twitter.com" target="_blank">&#x1F426;</a>
+            <a href="https://linkedin.com" target="_blank">&#x1F465;</a>
+        </div>
     </div>
     <script>
         function previewImage() {
