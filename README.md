@@ -1,16 +1,14 @@
 # Watercolor Image Generator
 
 ## Overview
-This project is a simple web application that transforms uploaded images into hyper-realistic watercolor paintings using Google's Gemini API. The application features a dark-themed frontend with image preview functionality and a rotating loader during processing.
+This project is a simple web application that transforms uploaded images into hyper-realistic watercolor paintings using Google's Gemini API. The application features a backend powered by Flask and serves static files from a `public` directory.
 
 ## Features
 - Upload an image and preview it before processing.
 - Generate hyper-realistic watercolor paintings with detailed artistic prompts.
-- Dark-themed aesthetic frontend.
-- Rotating loader during image processing.
+- Backend serves static files from the `public` directory.
 
 ## Technologies Used
-- **Frontend**: HTML, CSS, JavaScript
 - **Backend**: Python (Flask)
 - **API**: Google Gemini API
 
@@ -40,7 +38,7 @@ This project is a simple web application that transforms uploaded images into hy
    ```bash
    python backend/app.py
    ```
-7. Open the `frontend/index.html` file in your browser.
+7. Access the application via the backend server.
 
 ## License
 This project is licensed under the MIT License. See the LICENSE file for details.
