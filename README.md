@@ -1,50 +1,62 @@
-# Watercolor Image Generator
+# 🎨 Watercolor Image Generator
 
-## Overview
-This project is a simple web application that transforms uploaded images into hyper-realistic watercolor paintings using Google's Gemini API. The application features a backend powered by Flask and serves static files from a `public` directory.
+Transform your images into stunning watercolor paintings with the power of AI! This project uses the Google Gemini API to convert uploaded images into hyper-realistic watercolor artwork. Perfect for artists, designers, and anyone who loves creative visuals.
 
-## Features
-- Upload an image and preview it before processing.
-- Generate hyper-realistic watercolor paintings with detailed artistic prompts.
-- Backend serves static files from the `public` directory.
+## ✨ Features
+- **AI-Powered Transformation**: Converts images into detailed watercolor paintings.
+- **Custom Artistic Style**: Mimics traditional watercolor techniques.
+- **User-Friendly Interface**: Simple and intuitive frontend for uploading and previewing images.
+- **Vercel Analytics Integration**: Track visitor interactions seamlessly.
 
-## Technologies Used
-- **Backend**: Python (Flask)
-- **API**: Google Gemini API
+## 🚀 Getting Started
 
-## Installation
+### Prerequisites
+- Node.js and npm installed
+- Python 3.8+ installed
+- Vercel account for deployment
+
+### Installation
 1. Clone the repository:
    ```bash
-   git clone git@github.com:Arjunheregeek/water_color.git
-   ```
-2. Navigate to the project directory:
-   ```bash
+   git clone https://github.com/Arjunheregeek/water_color.git
    cd water_color
    ```
-3. Set up a Python virtual environment:
-   ```bash
-   python -m venv venv
-   source venv/bin/activate # On Windows: venv\Scripts\activate
-   ```
-4. Install dependencies:
+2. Install backend dependencies:
    ```bash
    pip install -r requirements.txt
    ```
-5. Add your Google Gemini API key to the `.env` file:
-   ```properties
-   gemini_api=YOUR_API_KEY
+3. Install frontend dependencies:
+   ```bash
+   npm install
    ```
-6. Run the backend server:
+
+### Running Locally
+1. Start the backend server:
    ```bash
    python backend/app.py
    ```
-7. Access the application via the backend server.
+2. Serve the frontend:
+   ```bash
+   npm run dev
+   ```
+3. Open your browser and navigate to `http://localhost:3000`.
 
-## License
-This project is licensed under the MIT License. See the LICENSE file for details.
+## 🌐 Deployment
+1. Deploy the project on Vercel:
+   ```bash
+   vercel deploy
+   ```
+2. Ensure the `vercel.json` file is correctly configured for routing.
 
-## Contributing
-Feel free to fork the repository and submit pull requests for improvements or new features.
+## 📄 License
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
-## Contact
-For any inquiries, please contact [Arjunheregeek](mailto:arjunheregeek@example.com).
+## 🤝 Contributing
+Contributions are welcome! Feel free to fork the repository and submit a pull request.
+
+## 📧 Contact
+For any inquiries, reach out to [Arjun](https://github.com/Arjunheregeek).
+
+---
+
+> "Art is not what you see, but what you make others see." - Edgar Degas
