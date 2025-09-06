@@ -2,4 +2,3 @@ Flask
 google-genai
 python-dotenv
 flask-cors
-@vercel/analytics
