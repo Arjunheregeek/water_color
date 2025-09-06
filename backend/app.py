@@ -29,8 +29,6 @@ def generate():
 
     image = request.files['image']
     image_data = image.read()
-    # The base64 conversion is not needed for the google-genai library
-    # image_base64 = base64.b64encode(image_data).decode('utf-8')
 
     long_prompt_text = " the main aim is to make the picture look more attractive as a water color painting use shiny colors **Transform the PROVIDED INPUT IMAGE into a highly detailed and hyper-realistic watercolor painting.** The conversion must meticulously retain the original composition, subject matter, and intricate details of the given image, while completely adopting the aesthetic of a masterfully executed watercolor.\n\n**Artistic Style & Technique:**\nEmploy a sophisticated blend of traditional watercolor techniques. Focus on soft, feathered edges created by the 'wet-on-wet' method where appropriate, especially for backgrounds or atmospheric elements from the input image. Simultaneously, utilize precise 'wet-on-dry' brushwork to render sharp details, fine lines, and crisp edges on the main subjects of the input image. Achieve rich, vibrant colors through multiple transparent washes and glazes, building up depth and luminosity without becoming opaque or muddy. Show subtle, characteristic pigment granulation and natural color bleeding where colors meet on damp paper.\n\n**Texture & Medium:**\nThe final image must clearly exhibit the inherent textures of a high-quality, cold-press watercolor paper. This includes subtle visible fibers, slight tooth, and the way the pigment settles into the depressions of the paper. Simulate the natural pooling and drying patterns of watercolor, creating nuanced variations in color intensity across washes.\n\n**Lighting & Atmosphere:**\nRecreate the original input image's lighting, but enhance it with the ethereal glow and translucency characteristic of watercolor. Ensure light sources appear to refract gently through the transparent layers of paint. Shadows should be soft, layered, and colored, rather than dull and opaque. The overall atmosphere should be serene, artistic, and imbued with the unique, delicate beauty that only a watercolor medium can convey.\n\n**Realism & Fidelity:**\nThe goal is an artwork that, while distinctly a watercolor, feels incredibly real and tangible—as if it were meticulously hand-painted by a skilled artist onto physical paper. Maintain photorealistic fidelity to the original input image's subject and its emotional tone. Every element, from textures like skin, fabric, or foliage, to reflections and subtle surface variations, should be reinterpreted convincingly within the watercolor medium. The painting should look finished, professional, and ready for display in an art gallery."
 
@@ -70,8 +68,7 @@ def generate():
             if hasattr(part, 'inline_data') and part.inline_data:
                 data_buffer = part.inline_data.data
                 file_extension = mimetypes.guess_extension(part.inline_data.mime_type)
-                file_name = f"output{file_extension}"
-                file_name = os.path.join(os.path.dirname(__file__), file_name)
+                file_name = f"/tmp/output{file_extension}"
 
                 print("DEBUG: Writing file", file_name)
                 print("DEBUG: Data buffer size", len(data_buffer))
