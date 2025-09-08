@@ -6,7 +6,7 @@ Transform your images into stunning watercolor paintings with the power of AI! T
 - **AI-Powered Transformation**: Converts images into detailed watercolor paintings.
 - **Custom Artistic Style**: Mimics traditional watercolor techniques.
 - **User-Friendly Interface**: Simple and intuitive frontend for uploading and previewing images.
-- **Vercel Analytics Integration**: Track visitor interactions seamlessly.
+- **Vercel Analytics Integration**: Track visitor interactions seamlessly
 
 ## 🚀 Getting Started
 
